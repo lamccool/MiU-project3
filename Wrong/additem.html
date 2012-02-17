@@ -114,7 +114,8 @@
     				
     				<label for="date">Date Added:</label>
 						<input type="date" name="date" id="date" placeholder="MM-DD-YYYY" />
-    								
+  		
+  			<a href="#adderrors" id="rberrorslink" data-rel="dialog" data-transition="pop" >Open Errors</a>						
 		<nav1>
 			<a href="#" id="displayData">View Your List</a>
 			<a href="#" id="clear"> Delete Your List</a>
@@ -129,7 +130,17 @@
 				</div>
 		</div>
 		
-
+			<div data-role="dialog" id="adderrors">
+			<div data-role="header" data-position="fixed">
+				<h1>Missing Fields</h1>
+			</div>
+			
+			<div data-role="content">
+				<ul>
+					<li></li>
+				</ul>
+			</div>
+		</div>
 	</body>
 	
 </html>
