@@ -2,7 +2,7 @@
 //Full Sail University
 //Laura McCool
 
-window.addEventListener ("DOMContentLoaded", function(){
+/*window.addEventListener ("DOMContentLoaded", function(){
 	function $(x){
 		var theElement = document.getElementById(x);
 		return theElement;
@@ -276,4 +276,13 @@ window.addEventListener ("DOMContentLoaded", function(){
 	var save = $('submit');
 	save.addEventListener("click", validate);
 
+});*/
+
+
+$(document).ready(function(){
+		
+	var rbform = $('#giftForm');
+	rbform.validate();
+
 });
+

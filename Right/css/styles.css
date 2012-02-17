@@ -1,9 +1,46 @@
 /* 
 title: form.html Styles
 by Laura McCool
-for: CSS Selectors
+for: CSS Selectors*/
 
 
+label.error{display: block; margin:10px 0; color:#cc0000;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 h1 {
 	margin-top: 0px;
 	margin-bottom: 0px;
