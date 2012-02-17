@@ -1,10 +1,40 @@
-//Project 4
-//Visual Frameworks 1201
 //Mobile Media Development
 //Full Sail University
 //Laura McCool
 
-window.addEventListener ("DOMContentLoaded", function(){
+var parseGiftForm = function(data){
+
+});
+
+$(document).ready(function(){
+		
+	var rbform = $('#giftForm');
+		rberrorslink =$('rberrorslink')
+		;
+	
+	rbform.validate({
+		invalidHandler: function(form, validator){
+			rberrorslink.click();
+			var html '';
+			for(var key in validator.submitted){
+				var label = $('label[for^="'+ key +'"]').not('[generated]');
+				var legend = label.closest('fieldset').find('.ui-controlgroup-label');
+				var fieldName = legend.length ? legend.text() : label.text();
+				html += '<li>'+ fieldName + '</li>';
+			};
+			$("#adderrors ul").html(html);
+			
+		},
+		submitHandler: function(){
+			var data = rbform.serializeArray();
+			parseGiftForm(data);
+		}
+	});
+
+});
+
+
+/*window.addEventListener ("DOMContentLoaded", function(){
 	function $(x){
 		var theElement = document.getElementById(x);
 		return theElement;
@@ -54,13 +84,6 @@ window.addEventListener ("DOMContentLoaded", function(){
 				return false;
 		}
 	}
-	
-    function($) {
-        $("#carousel1").carousel();
-        $("#carousel2").carousel({direction: "vertical"});
-    })(jQuery);
-	
-	
 	
 	function storeData(key){
 	// If there is no key this means this is a brand new item and we need a new key
@@ -285,4 +308,8 @@ window.addEventListener ("DOMContentLoaded", function(){
 	var save = $('submit');
 	save.addEventListener("click", validate);
 
-});
+});*/
+
+
+
+
